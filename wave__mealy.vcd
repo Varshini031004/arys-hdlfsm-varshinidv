@@ -1,0 +1,396 @@
+$date
+	Mon Sep 22 07:28:25 2025
+$end
+$version
+	QuestaSim Version 2024.3_1
+$end
+$timescale
+	1ns
+$end
+
+$scope module tb_fault_fsm_mealy $end
+$var reg 1 ! clk $end
+$var reg 16 " current [15:0] $end
+$var reg 4 # mask [3:0] $end
+$var reg 1 $ reset $end
+$var reg 1 % shutdown_signal $end
+$var reg 2 & state [1:0] $end
+
+$scope function state_name $end
+$var reg 2 ' s [1:0] $end
+$upscope $end
+
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) current [15] $end
+$var wire 1 * current [14] $end
+$var wire 1 + current [13] $end
+$var wire 1 , current [12] $end
+$var wire 1 - current [11] $end
+$var wire 1 . current [10] $end
+$var wire 1 / current [9] $end
+$var wire 1 0 current [8] $end
+$var wire 1 1 current [7] $end
+$var wire 1 2 current [6] $end
+$var wire 1 3 current [5] $end
+$var wire 1 4 current [4] $end
+$var wire 1 5 current [3] $end
+$var wire 1 6 current [2] $end
+$var wire 1 7 current [1] $end
+$var wire 1 8 current [0] $end
+$var wire 1 9 mask [3] $end
+$var wire 1 : mask [2] $end
+$var wire 1 ; mask [1] $end
+$var wire 1 < mask [0] $end
+$var wire 1 = reset $end
+$var parameter 32 > CURRENT_MAX $end
+$var parameter 32 ? DEBOUNCE_LIMIT $end
+$var parameter 32 @ IMBALANCE_THRESHOLD $end
+$var parameter 32 A TEMP_MAX $end
+$var parameter 32 B VOLTAGE_MAX $end
+$var parameter 32 C VOLTAGE_MIN $end
+$var reg 1 D any_fault $end
+$var reg 3 E debounce_counter [2:0] $end
+$var reg 1 F fault_imb $end
+$var reg 1 G fault_oc $end
+$var reg 1 H fault_ot $end
+$var reg 1 I fault_ov $end
+$var reg 1 J fault_uv $end
+$var reg 16 K max_voltage [15:0] $end
+$var reg 16 L min_voltage [15:0] $end
+$var reg 1 M shutdown_signal $end
+$var reg 2 N state [1:0] $end
+$var reg 2 O current_state [1:0] $end
+$var reg 2 P next_state [1:0] $end
+$upscope $end
+
+$scope task set_imbalance_fault $end
+$upscope $end
+
+$scope task set_masked_fault $end
+$upscope $end
+
+$scope task set_normal $end
+$upscope $end
+
+$scope task set_persistent_fault $end
+$upscope $end
+
+$scope task set_transient_spike $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+1=
+0(
+0!
+bx "
+bx #
+1$
+0%
+b0 &
+bx '
+b1111101000 >
+b101 ?
+b1100100 @
+b1010000 A
+b1000001101000 B
+b101110111000 C
+xD
+b0 E
+xF
+xG
+0H
+0I
+0J
+bx K
+bx L
+0M
+b0 N
+b0 O
+b0 P
+$end
+#5
+1!
+1(
+b0 '
+#10
+0$
+b111110100 "
+b0 #
+0!
+0=
+0<
+0;
+0:
+09
+08
+07
+16
+05
+14
+13
+12
+11
+10
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+b111001110100 K
+b111001110100 L
+0G
+0F
+0D
+#15
+1!
+1(
+#20
+0!
+0(
+#25
+1!
+1(
+#30
+0!
+0(
+#35
+1!
+1(
+#40
+0!
+0(
+#45
+1!
+1(
+#50
+0!
+0(
+#55
+1!
+1(
+#60
+0!
+0(
+1I
+b1000110010100 K
+1F
+1D
+b1 P
+#65
+1!
+1(
+b1 O
+b1 E
+b1 N
+b1 &
+#70
+0!
+0(
+b111001110100 K
+0I
+0F
+0D
+#75
+1!
+1(
+b1 '
+b0 E
+#80
+0!
+0(
+#85
+1!
+1(
+#90
+0!
+0(
+#95
+1!
+1(
+#100
+b10010110000 "
+0!
+06
+02
+00
+1.
+0(
+1G
+1I
+b1000110010100 K
+1H
+1F
+1D
+#105
+1!
+1(
+b1 E
+#110
+0!
+0(
+#115
+1!
+1(
+b10 E
+#120
+0!
+0(
+#125
+1!
+1(
+b11 E
+#130
+0!
+0(
+#135
+1!
+1(
+b100 E
+#140
+0!
+0(
+#145
+1!
+1(
+b101 E
+b10 P
+#150
+0!
+0(
+#155
+1!
+1(
+b10 O
+b110 E
+b10 N
+1M
+1%
+b10 &
+#160
+0!
+0(
+b111100111100 K
+1H
+0I
+#165
+1!
+1(
+b10 '
+b111 E
+#170
+0!
+0(
+#175
+1!
+1(
+b0 E
+0M
+0%
+#180
+0!
+0(
+#185
+1!
+1(
+b1 E
+#190
+0!
+0(
+#195
+1!
+1(
+b10 E
+#200
+0!
+0(
+#205
+1!
+1(
+b11 E
+#210
+0!
+0(
+#215
+1!
+1(
+b100 E
+#220
+b111110100 "
+b10 #
+0!
+1;
+16
+12
+10
+0.
+0(
+b111001110100 K
+0G
+0H
+0F
+0D
+b0 P
+#225
+1!
+1(
+b0 O
+b0 E
+b0 N
+b0 &
+#230
+0!
+0(
+#235
+1!
+1(
+b0 '
+#240
+0!
+0(
+#245
+1!
+1(
+#250
+0!
+0(
+#255
+1!
+1(
+#260
+0!
+0(
+#265
+1!
+1(
+#270
+0!
+0(
+#275
+1!
+1(
